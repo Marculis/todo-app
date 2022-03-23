@@ -1,0 +1,80 @@
+$mainTextColor: rgb(255, 145, 0);
+
+.buttonBlock {
+  padding: 10px;
+  button {
+    margin-right: 10px;
+  }
+}
+.todoContainer {
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+  }
+
+  .todoBlock {
+    margin: 0 auto;
+
+    .todoItem {
+      display: grid;
+      grid-template-areas:
+        "h4 h4 h4 "
+        "d d g";
+      grid-template-rows: 1fr 20px;
+      margin-bottom: 10px;
+      padding: 0px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.925);
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.521);
+      }
+      h4 {
+        grid-area: h4;
+        margin: 0 auto 10px auto;
+        width: 70%;
+        text-transform: uppercase;
+        color: rgb(88, 88, 88);
+      }
+
+      img {
+        grid-area: g;
+        width: 1.1em;
+        height: 1.1em;
+        transition: 0.3s;
+        opacity: 0.4;
+        margin-left: auto;
+        position: relative;
+        top: -5px;
+        cursor: pointer;
+        &:hover {
+          width: 1em;
+          height: 1em;
+          opacity: 1;
+        }
+      }
+      .delImg {
+        margin-right: 12px;
+      }
+      .editImg {
+        margin-right: 39px;
+      }
+      .arrowUp {
+        margin-right: 68px;
+      }
+      .date {
+        grid-area: d;
+        margin-right: auto;
+        margin-left: 5px;
+        font-size: 0.8em;
+        font-style: italic;
+        padding-bottom: 3px;
+        .boldDate {
+          color: $mainTextColor;
+        }
+      }
+    }
+  }
+}
