@@ -1,0 +1,99 @@
+$mainTextColor: rgb(255, 145, 0);
+$mainBgColor: rgba(255, 255, 255, 0.301);
+.App {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-areas:
+    "h h  "
+    "n c "
+    "n c ";
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-rows: 40px 6fr 5fr;
+  grid-gap: 15px;
+
+  .App-header {
+    background-color: $mainBgColor;
+    color: white;
+    text-align: center;
+    grid-area: h;
+    border-radius: 0 0 10px 10px;
+
+    span {
+      color: white;
+      font-size: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  .nav {
+    grid-area: n;
+    padding: 10px;
+    text-align: center;
+    min-height: 100%;
+    background: $mainBgColor;
+    border-radius: 10px 0 0 10px;
+    box-sizing: border-box;
+    ul li {
+      list-style-type: circle;
+      color: white;
+      transition: 0.3s;
+      &:hover {
+        color: rgb(207, 9, 9);
+        list-style-type: disc;
+      }
+      a {
+        text-align: start;
+        font-size: 18px;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $mainTextColor;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+  .pagesWrapper {
+    grid-area: c;
+    padding: 30px;
+    background: $mainBgColor;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 93vh;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0 10px 10px 0;
+
+    h1 {
+      margin: 10px;
+      text-align: center;
+      color: $mainTextColor;
+    }
+
+    button {
+      background-color: white;
+      border: 2px solid $mainTextColor;
+      padding: 3px 10px;
+      width: 140px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-right: 20px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.568);
+      }
+    }
+  }
+}
