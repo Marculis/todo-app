@@ -1,0 +1,129 @@
+$mainTextColor: rgb(255, 145, 0);
+
+.taskContainer {
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .formDiv {
+    form {
+      .divInput {
+        display: inline;
+      }
+      .submitBtn {
+        margin: 0 0 10px 10px;
+        width: 32px;
+        font-size: 1em;
+        padding: 2px;
+        background: rgb(243, 242, 242);
+        color: $mainTextColor;
+        border-color: $mainTextColor;
+
+        &:hover {
+          background: $mainTextColor;
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+  }
+
+  .taskBlock {
+    margin: 0 auto;
+
+    .taskItem {
+      display: grid;
+      grid-template-areas:
+        "h4 h4 dat"
+        "des des dat"
+        "des des but";
+      grid-template-columns: 1fr 1fr 0.8fr;
+      grid-template-rows: auto auto 15px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+      h4 {
+        grid-area: h4;
+        margin: 0 auto 5px auto;
+        width: 70%;
+        text-transform: uppercase;
+        color: rgb(88, 88, 88);
+      }
+
+      .descr {
+        grid-area: des;
+        font-style: italic;
+      }
+
+      .dates {
+        grid-area: dat;
+        font-size: 0.8em;
+        text-align: start;
+        margin: 2px;
+
+        .line {
+          background: $mainTextColor;
+          opacity: 0.7;
+        }
+        div {
+          display: grid;
+          grid-template-areas: "d s";
+          grid-template-columns: 1fr 1fr;
+          .dateText {
+            grid-area: d;
+            font-style: italic;
+            font-weight: 400;
+          }
+          .boldDate {
+            grid-area: s;
+          }
+        }
+
+        .added {
+          .boldDate {
+            color: $mainTextColor;
+          }
+        }
+        .start {
+          .boldDate {
+            color: green;
+          }
+        }
+        .dead {
+          .boldDate {
+            color: rgb(167, 16, 16);
+          }
+        }
+      }
+
+      img {
+        grid-area: but;
+        width: 1.1em;
+        height: 1.1em;
+        transition: 0.3s;
+        opacity: 0.4;
+        position: relative;
+        cursor: pointer;
+        margin-left: auto;
+        top: -5px;
+        &:hover {
+          width: 1em;
+          height: 1em;
+          opacity: 1;
+        }
+      }
+
+      .delImg {
+        margin-right: 12px;
+      }
+      .editImg {
+        margin-right: 39px;
+      }
+      .arrowUp {
+        margin-right: 68px;
+      }
+    }
+  }
+}
