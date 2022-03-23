@@ -1,0 +1,22 @@
+.divInput {
+  display: grid;
+  grid-template-areas: "l i e";
+  grid-template-columns: 1fr 2fr 0.5fr;
+  margin-bottom: 5px;
+  label.inputName {
+    grid-area: l;
+    text-transform: uppercase;
+    color: rgb(255, 145, 0);
+    font-weight: 600;
+  }
+
+  input {
+    grid-area: i;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 3px;
+    height: 20px;
+    width: 70%;
+    font-size: 1.1em;
+  }
+}
